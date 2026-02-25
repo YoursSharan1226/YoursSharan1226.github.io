@@ -1,201 +1,276 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title><title>Sharan Ragothaman | Business & Data Analyst</title></title>
-  <meta name="description" content="Business Analyst | Data Analytics | Applied Machine Learning. Portfolio of projects, skills, and experience." />
-  <link rel="stylesheet" href="style.css" />
+  <title>Sharan Raghavendra Ragothaman | Portfolio</title>
+
+  <!-- Fonts: Serif for headings, clean sans for body -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
-  <!-- NAVBAR -->
-  <header class="nav">
-    <div class="container nav-inner">
-      <a class="brand" href="#home">Sharan</a>
 
-      <nav class="nav-links">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#experience">Experience</a>
-        <a href="#contact">Contact</a>
-      </nav>
-
-      <div class="nav-cta">
-        <a class="btn btn-ghost" href="#projects">View Projects</a>
-       <a class="btn btn-solid"
-   href="assets/Sharan_Ragothaman_Resume.pdf"
-   download="Sharan_Ragothaman_Resume.pdf">
-  Download Resume
-</a>
+  <!-- NAV (hidden on first screen; appears after you scroll into About) -->
+  <header class="topbar" id="topbar">
+    <nav class="nav-pill">
+      <div class="nav-left">
+        <span class="nav-name">SHARAN RAGHAVENDRA</span>
       </div>
-    </div>
+
+      <div class="nav-links">
+        <a href="#skills">SKILLS</a>
+        <a href="#projects">PROJECTS</a>
+        <a href="#experience">EXPERIENCE</a>
+        <a href="#education">EDUCATION</a>
+        <a href="#contact">CONTACT</a>
+      </div>
+    </nav>
   </header>
 
-  <!-- HERO -->
-  <main id="home" class="section hero">
-    <div class="container hero-inner">
-      <div>
-        <p class="eyebrow">Business Analyst • Data Analytics • Applied ML</p>
-        <h1 class="headline">Business & Data Analyst | Growth Strategy | Customer Retention & ML Driven Insights </h1>
-        <p class="subhead">
-          I build analytics solutions, dashboards, and ML driven targeting models that help teams improve performance,
-          reduce cost, and make decisions faster.
-        </p>
-
-        <div class="hero-actions">
-          <a class="btn btn-solid" href="#projects">Explore My Work</a>
-          <a class="btn btn-ghost" href="#contact">Contact Me</a>
+  <!-- HERO (Screen 1 - NO NAVBAR) -->
+  <section class="hero" id="home">
+    <div class="hero-top">
+      <div class="brand">
+        <div class="brand-icon" aria-hidden="true">
+          <!-- Simple geometric logo (similar vibe to your screenshot) -->
+          <span></span><span></span><span></span><span></span>
         </div>
 
-        <div class="quick-links">
-          <a href="https://github.com/YoursSharan126" target="_blank" rel="noreferrer">GitHub</a>
-          <span>•</span>
-          <a href="https://www.linkedin.com/in/sharan8623/" target="_blank" rel="noreferrer">LinkedIn</a>
-          <span>•</span>
-          <a href="mailto:sr.raya8623@gmail.com">Email</a>
+        <div class="brand-text">
+          <div class="brand-title">Sharan Raghavendra<br/>Ragothaman</div>
+          <!-- Small location near name (as requested) -->
+          <div class="brand-location">Dallas, TX, US</div>
         </div>
       </div>
 
-      <div class="hero-side">
-  <img src="assets/profile.jpg" alt="Sharan Raghavendra" class="profile-img">
+      <div class="hero-tagline">
+        BUSINESS ANALYTICS • DATA ANALYTICS • APPLIED ML
+      </div>
+    </div>
 
-  <div class="hero-card">
-    <h3>Focus Areas</h3>
-    <ul>
-      <li>Business & Data Analysis (Excel, SQL, BI)</li>
-      <li>Predictive Modeling & Experimentation</li>
-      <li>Customer Analytics, Segmentation, Targeting</li>
-      <li>Storytelling & Stakeholder Communication</li>
-    </ul>
-  </div>
-</div>
-  </main>
+    <div class="hero-main">
+      <div class="hero-gradient-block">
+        <h1 class="hero-heading">
+          Business &amp; Data Analyst |
+          Growth Strategy &amp; ML Driven Insights
+        </h1>
+      </div>
 
-  <!-- ABOUT -->
-  <section id="about" class="section">
-    <div class="container">
-      <h2 class="section-title">About</h2>
-      <p class="section-text">
-        I’m a Business Analyst focused on data driven strategy. I translate business questions into analytical frameworks,
-        build models and dashboards, and communicate insights in a way that stakeholders can act on.
-      </p>
+      <div class="hero-photo">
+        <!-- Replace assets/profile.jpg with your image -->
+        <img src="assets/profile.jpg" alt="Sharan portrait" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT (Screen 2 - NAV appears from here onward) -->
+  <section class="section about" id="about">
+    <div class="container two-col about-grid">
+
+      <div class="about-left">
+        <h2 class="big-title">About</h2>
+        <h3 class="accent-name">Sharan</h3>
+
+        <div class="about-buttons">
+          <a class="pill-btn" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">
+            <i class="fa-brands fa-linkedin"></i> Linkedin
+          </a>
+          <a class="pill-btn" href="https://github.com/" target="_blank" rel="noreferrer">
+            <i class="fa-brands fa-github"></i> Github
+          </a>
+        </div>
+      </div>
+
+      <div class="about-right">
+        <p class="about-text">
+          I’m a Business Analyst focused on data driven strategy. I translate business questions into analytical frameworks,
+          build models and dashboards, and communicate insights in a way that stakeholders can act on. Aside from data strategy,
+          I’m deeply interested in decision science and building systems that turn business uncertainty into measurable clarity.
+        </p>
+
+        <a class="resume-btn" href="assets/resume.pdf" download>
+          Download Resume
+        </a>
+      </div>
+
     </div>
   </section>
 
   <!-- SKILLS -->
-  <section id="skills" class="section alt">
+  <section class="section" id="skills">
     <div class="container">
-      <h2 class="section-title">Skills</h2>
+      <div class="section-head">
+        <h2 class="section-title">Skills</h2>
+        <div class="section-line"></div>
+      </div>
 
-      <div class="grid-3">
-        <div class="card">
-          <h3>Analytics</h3>
-          <p>SQL, Excel, KPI design, cohort & funnel analysis, A/B testing basics</p>
-        </div>
-        <div class="card">
-          <h3>Data Science</h3>
-          <p>Python, supervised/unsupervised ML, feature engineering, evaluation</p>
-        </div>
-        <div class="card">
-          <h3>Tools</h3>
-          <p>Power BI / Tableau, Streamlit, FastAPI, Git/GitHub</p>
-        </div>
+      <div class="chips">
+        <span class="chip">Python</span>
+        <span class="chip">SQL</span>
+        <span class="chip">Power BI</span>
+        <span class="chip">Tableau</span>
+        <span class="chip">Excel</span>
+        <span class="chip">Statistics</span>
+        <span class="chip">Machine Learning</span>
+        <span class="chip">NLP</span>
+        <span class="chip">FastAPI</span>
+        <span class="chip">Streamlit</span>
       </div>
     </div>
   </section>
 
   <!-- PROJECTS -->
-  <section id="projects" class="section">
+  <section class="section" id="projects">
     <div class="container">
-      <h2 class="section-title">Projects</h2>
+      <div class="section-head">
+        <h2 class="section-title">Projects</h2>
+        <div class="section-line"></div>
+      </div>
 
-      <div class="grid-2">
-        <article class="card">
-          <h3>Telco Churn Intelligence</h3>
-          <p>End to end churn prediction and retention insights using ML + API + interactive app.</p>
-          <div class="tags">
-            <span>Python</span><span>FastAPI</span><span>Streamlit</span><span>ML</span>
+      <div class="projects-grid">
+
+        <!-- Project Card 1 -->
+        <article class="project-card">
+          <div class="project-top">
+            <h3 class="project-title">RAG System: Document Q&amp;A Assistant</h3>
+            <div class="project-tags">
+              <span>FastAPI</span><span>Vector DB</span><span>Streamlit</span>
+            </div>
           </div>
-          <div class="card-links">
-            <a href="https://github.com/YoursSharan126/telco-churn-intelligence" target="_blank" rel="noreferrer">GitHub Repo</a>
+          <p class="project-desc">
+            Built an end-to-end Retrieval Augmented Generation pipeline to answer questions from internal documents with grounded citations.
+            Includes ingestion, chunking, embeddings, retrieval evaluation, and a Streamlit UI powered by a FastAPI backend.
+          </p>
+          <div class="project-links">
+            <a href="#" target="_blank" rel="noreferrer">GitHub Repo</a>
+            <a href="#" target="_blank" rel="noreferrer">Live Demo</a>
           </div>
         </article>
 
-        <article class="card">
-          <h3>Predictive Marketing Targeting</h3>
-          <p>Optimized marketing spend by ranking customers and measuring capture@K for business value.</p>
-          <div class="tags">
-            <span>Python</span><span>Classification</span><span>Top-K</span>
+        <!-- Project Card 2 -->
+        <article class="project-card">
+          <div class="project-top">
+            <h3 class="project-title">Social Media Stance Analysis (NLP)</h3>
+            <div class="project-tags">
+              <span>NLP</span><span>Classification</span><span>EDA</span>
+            </div>
           </div>
-          <div class="card-links">
-            <a href="https://github.com/YoursSharan126/Predictive-Analytics-for-Cost-Efficient-Marketing-Campaign-Strategy" target="_blank" rel="noreferrer">GitHub Repo</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <h3>Social Media Topic Modeling</h3>
-          <p>Unsupervised NLP pipeline to discover themes and interpret global social conversations.</p>
-          <div class="tags">
-            <span>NLP</span><span>BERTopic</span><span>UMAP</span><span>HDBSCAN</span>
-          </div>
-          <div class="card-links">
-            <a href="https://github.com/YoursSharan126/Automated-Intelligence-Topic-Modeling-and-Interpretive-Analysis-of-Global-Social-Media-Conversations" target="_blank" rel="noreferrer">GitHub Repo</a>
+          <p class="project-desc">
+            Developed an NLP pipeline to classify stance in social media text using robust preprocessing, feature engineering,
+            and model evaluation. Delivered insights via clear reporting and reproducible workflows.
+          </p>
+          <div class="project-links">
+            <a href="#" target="_blank" rel="noreferrer">GitHub Repo</a>
+            <a href="#" target="_blank" rel="noreferrer">Report</a>
           </div>
         </article>
 
-        <article class="card">
-          <h3>Airbnb Segmentation</h3>
-          <p>Customer/listing segmentation using PCA + clustering to identify meaningful listing groups.</p>
-          <div class="tags">
-            <span>Unsupervised</span><span>PCA</span><span>KMeans</span>
+        <!-- Project Card 3 -->
+        <article class="project-card">
+          <div class="project-top">
+            <h3 class="project-title">Customer Response Uplift / Targeting Model</h3>
+            <div class="project-tags">
+              <span>ML</span><span>Marketing Analytics</span><span>Top-K</span>
+            </div>
           </div>
-          <div class="card-links">
-            <a href="https://github.com/YoursSharan126/Airbnb-Listing-Segmentation-using-Clustering-PCA" target="_blank" rel="noreferrer">GitHub Repo</a>
+          <p class="project-desc">
+            Built a customer targeting model to maximize campaign efficiency using probability ranking and Top-K metrics
+            (capture/response rate), translating results into actionable segments for business stakeholders.
+          </p>
+          <div class="project-links">
+            <a href="#" target="_blank" rel="noreferrer">GitHub Repo</a>
+            <a href="#" target="_blank" rel="noreferrer">Slides</a>
           </div>
         </article>
+
+        <!-- Project Card 4 -->
+        <article class="project-card">
+          <div class="project-top">
+            <h3 class="project-title">Business Dashboard &amp; KPI Storytelling</h3>
+            <div class="project-tags">
+              <span>Power BI</span><span>KPIs</span><span>Insights</span>
+            </div>
+          </div>
+          <p class="project-desc">
+            Designed an interactive KPI dashboard with clean visual hierarchy, business-focused metrics, and drill-down views,
+            turning raw data into decision-ready insights.
+          </p>
+          <div class="project-links">
+            <a href="#" target="_blank" rel="noreferrer">Dashboard</a>
+            <a href="#" target="_blank" rel="noreferrer">GitHub Repo</a>
+          </div>
+        </article>
+
       </div>
     </div>
   </section>
 
   <!-- EXPERIENCE -->
-  <section id="experience" class="section alt">
+  <section class="section" id="experience">
     <div class="container">
-      <h2 class="section-title">Experience</h2>
+      <div class="section-head">
+        <h2 class="section-title">Experience</h2>
+        <div class="section-line"></div>
+      </div>
 
-      <div class="card">
-        <h3>Business Analyst / Data Analyst (Your Role)</h3>
-        <p class="muted">Add your company/internship details here (role, timeframe, impact).</p>
-        <ul>
-          <li>Example: Built KPI dashboards to track performance and reduce reporting time.</li>
-          <li>Example: Automated recurring analysis using SQL + Python.</li>
-          <li>Example: Presented insights to stakeholders with clear recommendations.</li>
-        </ul>
+      <div class="content-box">
+        <h3 class="content-title">Frontend Developer / Business Analyst (Update this)</h3>
+        <p class="content-text">
+          Add your role details here in 3–5 bullet-like lines (keep it tight and impact-focused).
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="section" id="education">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="section-title">Education</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="content-box">
+        <h3 class="content-title">Master’s (Data Analytics &amp; Machine Learning)</h3>
+        <p class="content-text">
+          Add university + graduation year + 1 line on focus areas.
+        </p>
       </div>
     </div>
   </section>
 
   <!-- CONTACT -->
-  <section id="contact" class="section">
+  <section class="section" id="contact">
     <div class="container">
-      <h2 class="section-title">Contact</h2>
-      <p class="section-text">Open to Business Analyst / Data Analyst roles and analytics focused projects.</p>
-
-      <div class="contact-row">
-        <a class="btn btn-solid" href="mailto:sr.raya8623@gmail.com">Email Me</a>
-        <a class="btn btn-ghost" href="https://github.com/YoursSharan126" target="_blank" rel="noreferrer">GitHub</a>
-        <a class="btn btn-ghost" href="https://www.linkedin.com/in/sharan8623/" target="_blank" rel="noreferrer">LinkedIn</a>
+      <div class="section-head">
+        <h2 class="section-title">Contact</h2>
+        <div class="section-line"></div>
       </div>
 
-      <footer class="footer">
-        <span>© <span id="year"></span> Sharan Raghavendra</span>
-      </footer>
+      <div class="contact-card">
+        <p class="contact-text">Reach out for opportunities, collaborations, or consulting.</p>
+        <div class="contact-links">
+          <a href="mailto:your.email@example.com"><i class="fa-solid fa-envelope"></i> Email</a>
+          <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+          <a href="https://github.com/" target="_blank" rel="noreferrer"><i class="fa-brands fa-github"></i> GitHub</a>
+        </div>
+      </div>
     </div>
   </section>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Sharan Raghavendra Ragothaman</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

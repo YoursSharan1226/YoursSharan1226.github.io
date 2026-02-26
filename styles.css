@@ -426,12 +426,19 @@ body{
 
 /* ---------------- Responsive ---------------- */
 @media (max-width: 980px){
-  .hero-main{ grid-template-columns: 1fr; }
-  .hero-gradient-block{ min-height: 360px; padding: 32px; }
-  .two-col{ grid-template-columns: 1fr; }
-  .projects-grid{ grid-template-columns: 1fr; }
-  .big-title{ font-size: 64px; }
-  .accent-name{ font-size: 62px; }
+  .hero-main{ min-height: auto; }
+  .hero-photo{
+    position: static;
+    transform: none;
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
+  }
+  .hero-gradient-block{
+    height: auto;
+    padding: 36px;
+    min-height: 320px;
+  }
 }
 @media (max-width: 560px){
   .container{ width: min(1100px, calc(100% - 30px)); }

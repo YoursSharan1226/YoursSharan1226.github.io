@@ -22,6 +22,7 @@ body{
   margin: 0;
   color: var(--text);
   font-family: var(--sans);
+  padding-top: 86px; /* reserve space for fixed nav */
 
   /* Silver / metallic sheen like your mock */
   background: radial-gradient(1200px 600px at 20% 10%, rgba(255,255,255,.55), rgba(255,255,255,0) 55%),
@@ -37,36 +38,41 @@ body{
 
 /* ---------------- NAV (hidden on first screen) ---------------- */
 .topbar{
-  position: sticky;
-  top: 18px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   z-index: 1000;
-  opacity: 0;
-  transform: translateY(-10px);
-  pointer-events: none;
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
   transition: opacity .35s ease, transform .35s ease;
 }
+
 .topbar.visible{
-  opacity: 1;
+  opacity: 0;
   transform: translateY(0);
   pointer-events: auto;
 }
-.nav-pill{
-  margin: 0 auto;
-  width: min(1180px, calc(100% - 44px));
-  background: linear-gradient(90deg, var(--grad1), var(--grad2));
-  border-radius: var(--radius-xl);
-  padding: 18px 28px;
-  box-shadow: var(--shadow);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
+.nav-pill {
+    margin: 0 auto;
+    width: min(500px, calc(100% - 44px));
+    background: linear-gradient(90deg, #FF5722, var(--grad2));
+    border-radius: var(--radius-xl);
+    padding: 18px 28px;
+    box-shadow: var(--shadow);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 20px;
+    margin-left: 1084px;
 }
 .nav-name{
   letter-spacing: .06em;
-  font-weight: 700;
+  font-weight: 900;
   color: rgba(255,255,255,.9);
-  font-size: 14px;
+  font-size: 20px;
 }
 .nav-links{
   display: flex;
@@ -119,11 +125,11 @@ body{
 .brand-icon span:nth-child(3){ left: 0; top: 20px; }
 .brand-icon span:nth-child(4){ left: 20px; top: 20px; }
 
-.brand-title{
-  font-family: var(--serif);
-  font-size: 34px;
-  line-height: 1.02;
-  font-weight: 600;
+.brand-title {
+    font-family: var(--serif);
+    font-size: 58px;
+    line-height: 1.02;
+    font-weight: 600;
 }
 .brand-location{
   margin-top: 6px;
@@ -132,13 +138,18 @@ body{
   letter-spacing: .03em;
 }
 
-.hero-tagline{
-  font-size: 12px;
-  letter-spacing: .08em;
-  font-weight: 700;
-  color: rgba(18,18,18,.72);
-  margin-top: 10px;
-  text-transform: uppercase;
+.hero-tagline {
+    font-size: 14px;
+    letter-spacing: .08em;
+    font-weight: 900;
+    color: rgb(159 4 4 / 72%);
+    margin-top: 10px;
+    text-transform: uppercase;
+    margin-left: 100px;
+    background: -webkit-linear-gradient(#fe5724, #ba82c3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-right: 130px;
 }
 
 .hero-main{
@@ -151,18 +162,16 @@ body{
 }
 
 /* Full-width pill behind photo (like mock) */
-.hero-gradient-block{
-  width: 100%;
-  height: 420px;
-
-  border-radius: var(--radius-xl);
-  background: linear-gradient(90deg, var(--grad1), var(--grad2));
-  box-shadow: var(--shadow);
-
-  /* Push text down-left and create space for photo on right */
-  display: flex;
-  align-items: flex-end;
-  padding: 48px 520px 54px 56px;
+.hero-gradient-block {
+    width: 100%;
+    height: 533px;
+    border-radius: var(--radius-xl);
+    background: linear-gradient(90deg, var(--grad1), var(--grad2));
+    box-shadow: var(--shadow);
+    display: flex;
+    align-items: flex-end;
+    padding: 48px 720px 85px 56px;
+    margin-top: 102px;
 }
 
 /* Heading style stays same but slightly more like mock */
@@ -183,12 +192,15 @@ body{
   transform: translateY(-50%);
 }
 
-.hero-photo img{
-  width: 360px;
-  height: auto;
-  border-radius: 4px;
-  box-shadow: var(--shadow-soft);
-  object-fit: cover;
+.hero-photo img
+ {
+    width: 430px;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: var(--shadow-soft);
+    object-fit: cover;
+    margin-right: 78px;
+    margin-bottom: 250px;
 }
 
 /* ---------------- SECTIONS ---------------- */
@@ -334,11 +346,14 @@ body{
   font-size: 20px;
   font-weight: 700;
 }
-.project-tags{
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-  justify-content: flex-end;
+.project-tags
+ {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    width: 350px;
+    margin-left: 710px;
 }
 .project-tags span{
   font-size: 11px;
@@ -368,22 +383,29 @@ body{
 .project-links a:hover{ text-decoration: underline; }
 
 /* EXPERIENCE / EDUCATION boxes */
-.content-box{
-  background: rgba(255,255,255,.16);
-  border: 1px solid rgba(0,0,0,.12);
-  border-radius: var(--radius-lg);
-  padding: 22px;
-  box-shadow: 0 16px 26px rgba(0,0,0,.14);
+.content-box {
+    background: rgba(255, 255, 255, .16);
+    border: 1px solid rgba(0, 0, 0, .12);
+    border-radius: var(--radius-lg);
+    padding: 22px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, .14);
 }
-.content-title{
-  margin: 0 0 10px;
-  font-family: var(--serif);
-  font-size: 22px;
+.content-title {
+    margin: 0 0 10px;
+    font-family: var(--serif);
+    font-size: 22px;
+    font-weight: bold;
 }
 .content-text{
   margin: 0;
   color: rgba(18,18,18,.82);
   line-height: 1.7;
+}
+.content-subhead{
+  margin: 0 0 10px;
+  font-family: var(--serif);
+  font-size: 18px;
+  color: rgba(18,18,18,.68);
 }
 
 /* CONTACT */
@@ -444,4 +466,17 @@ body{
   .container{ width: min(1100px, calc(100% - 30px)); }
   .brand-title{ font-size: 26px; }
   .nav-pill{ padding: 14px 18px; }
+}
+
+/* Overrides: make topbar fixed and prevent content overlap */
+body{ padding-top: 86px; }
+.topbar{
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  z-index: 1000 !important;
+  opacity: 1 !important;
+  transform: none !important;
+  pointer-events: auto !important;
 }

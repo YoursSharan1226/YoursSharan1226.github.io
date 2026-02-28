@@ -25,6 +25,7 @@ body {
   margin: 0;
   color: var(--foreground);
   font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 16px;
   background: radial-gradient(circle at 10% -20%, #ffffff, transparent 45%),
     radial-gradient(circle at 90% 0%, #e8edf7, transparent 35%), var(--silver-gradient);
   background-attachment: fixed;
@@ -47,7 +48,7 @@ a {
 .eyebrow {
   margin: 0 0 0.85rem;
   color: var(--muted);
-  font-size: 0.78rem;
+  font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 0.16em;
   font-weight: 600;
@@ -55,7 +56,7 @@ a {
 
 .section-title {
   margin: 0 0 2rem;
-  font-size: clamp(2rem, 4vw, 3.35rem);
+  font-size: 2.5rem;
   line-height: 1.04;
 }
 
@@ -118,7 +119,7 @@ a {
 
 .hero-title {
   margin: 0;
-  font-size: clamp(2.4rem, 6vw, 5rem);
+  font-size: 2.5rem;
   line-height: 0.96;
   letter-spacing: -0.03em;
 }
@@ -132,7 +133,7 @@ a {
 
 .hero-copy-small {
   margin-top: 1.25rem;
-  font-size: 0.94rem;
+  font-size: 1rem;
 }
 
 .cta-row {
@@ -149,7 +150,7 @@ a {
   border-radius: 14px;
   padding: 0.7rem 1rem;
   border: 1px solid var(--border);
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -298,18 +299,19 @@ a {
 
 h3 {
   margin: 0;
-  font-size: 1.08rem;
+  font-size: 1.25rem;
 }
 
 p {
   margin: 0.62rem 0 0;
   color: var(--muted);
   line-height: 1.6;
+  font-size: 1rem;
 }
 
 .company {
   color: #526280;
-  font-size: 0.92rem;
+  font-size: 1rem;
 }
 
 .meta {
@@ -317,7 +319,7 @@ p {
   color: var(--muted);
   text-transform: uppercase;
   letter-spacing: 0.13em;
-  font-size: 0.73rem;
+  font-size: 1rem;
   font-weight: 600;
   margin-bottom: 0.55rem;
 }
@@ -335,7 +337,7 @@ p {
   padding: 0.33rem 0.67rem;
   background: rgba(255, 255, 255, 0.66);
   color: #4f5e79;
-  font-size: 0.76rem;
+  font-size: 1rem;
 }
 
 .info-card ul {

@@ -85,36 +85,40 @@ const projects = [
 const experience = [
   {
     role: 'Junior Business Analyst',
-    company: 'Crytonix Remote Tech',
-    period: 'Recent',
+    company: 'Crytonix Remote Tech | Chennai, INDIA',
+    period: 'Jan 2024 - July 2024',
     bullets: [
-      'Drove product strategy and release planning with user-story clarity for engineering teams.',
-      'Mapped module flows and validated end-to-end product behavior through QA cycles.',
-      'Enabled secure client API integrations and validated performance and functionality.',
+      'Developed and refined business strategies to support successful product releases, aligning with client requirements and market demands.',
+      'Created detailed user stories to clearly communicate functionality and end-user needs to development teams.',
+      'Designed and mapped module flows, enabling a structured and efficient approach for the development team to implement features.',
+      'Facilitated API integration from client systems to access server data, ensuring seamless connectivity and functionality. Conducted thorough testing of APIs to confirm functionality, security, and performance standards.',
+      "Performed end-to-end testing of user flows to validate the developed product's usability and alignment with design specifications. Ensured logical implementation of the product flow, verifying that each component worked cohesively within the product framework.",
     ],
     details: {
       responsibilities:
-        'Translated stakeholder needs into implementation-ready stories and coordinated quality validation across features.',
-      technologies: 'Jira, API Testing, Product Analytics, User Story Mapping, QA Flows',
+        'Developed product release strategies, translated requirements into user stories, mapped module flows, and validated end-to-end implementation quality.',
+      technologies: 'JIRA, API Integration, API Testing, User Story Mapping, QA',
       impact:
-        'Improved delivery consistency and reduced ambiguity between business and engineering teams.',
+        'Improved release readiness and ensured reliable feature delivery through strong business-development alignment.',
     },
   },
   {
     role: 'Business Analyst Intern',
-    company: 'Foyr',
-    period: 'Earlier',
+    company: 'Foyr | Chennai (Remote), INDIA',
+    period: 'Feb 2023 - July 2024',
     bullets: [
-      'Analyzed subscription customer behavior and engagement trends.',
-      'Maintained KPI dashboards and shared performance narratives with stakeholders.',
-      'Produced actionable recommendations from reporting and customer communication data.',
+      'Performed in-depth analysis of customer data, focusing on subscription-based users, to identify trends, patterns, and customer behavior insights.',
+      'Maintained and update large-scale dashboards, presenting key metrics and performance indicators to track and monitor customer engagement and subscription growth.',
+      'Collaborated with cross-functional teams, including product managers and developers, to develop data-driven strategies for customer retention and acquisition.',
+      'Responded to customer queries and concerns through email communication, ensuring prompt and accurate resolutions to maintain high customer satisfaction levels.',
+      'Generated reports and presentations, clearly communicating findings and recommendations to internal stakeholders.',
     ],
     details: {
       responsibilities:
-        'Owned recurring analytics and reporting workflows to support customer success and growth decisions.',
-      technologies: 'Excel, Pivot Tables, Dashboarding, Reporting, Customer Analytics',
+        'Analyzed subscription customer behavior, maintained dashboards, and supported retention strategy with cross-functional stakeholders.',
+      technologies: 'Excel, Dashboards, Customer Analytics, Reporting, Stakeholder Communication',
       impact:
-        'Improved visibility into subscription health and strengthened data-informed stakeholder discussions.',
+        'Improved customer health visibility and enabled data-driven decisions for retention and acquisition.',
     },
   },
 ];

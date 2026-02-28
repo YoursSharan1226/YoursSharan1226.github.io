@@ -208,6 +208,7 @@ a {
   cursor: pointer;
   padding: 0;
   color: inherit;
+  font: inherit;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
@@ -344,11 +345,13 @@ p {
   margin: 0.85rem 0 0;
   padding-left: 1rem;
   color: var(--muted);
+  font-size: 1rem;
 }
 
 .info-card li {
   margin-bottom: 0.45rem;
   line-height: 1.55;
+  font-size: 1rem;
 }
 
 .timeline {

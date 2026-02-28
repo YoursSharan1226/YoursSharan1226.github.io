@@ -2,6 +2,16 @@
 const topbar = document.getElementById("topbar");
 const hero = document.getElementById("home");
 
+window.addEventListener("scroll", () => {
+  const heroBottom = hero.offsetHeight;
+
+  if (window.scrollY > heroBottom - 100) {
+    topbar.classList.add("scrolled");
+  } else {
+    topbar.classList.remove("scrolled");
+  }
+});
+
 function toggleNav() {
   const heroBottom = hero.getBoundingClientRect().bottom;
   // when hero bottom goes above ~80px, show navbar

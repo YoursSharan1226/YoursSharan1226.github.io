@@ -11,13 +11,34 @@ const navItems = [
 
 const projects = [
   {
+    title: 'Treeni - Document Intelligence RAG System',
+    date: 'Ongoing',
+    description:
+      'Architected a production grade RAG system delivering validated, citation backed intelligence from unstructured PDFs.',
+    tags: ['RAG', 'Regex', 'Pydantic', 'Qdrant', 'vLLM'],
+    image: '/rag-system.jpeg',
+    summaryPoints: [
+      'Built an end to end document intelligence pipeline to ingest supplier data, download PDFs, extract text and tables with OCR support, and maintain page level audit traceability.',
+      'Engineered a hybrid RAG system combining semantic embeddings, vector search, BM25 keyword retrieval, and fuzzy matching for high precision, supplier scoped evidence retrieval.',
+      'Implemented grounded answer generation with strict validation gates, enforcing SUPPORTED / NOT_FOUND logic to eliminate hallucinations and ensure citation-backed outputs.',
+      'Designed a production ready AI architecture using FastAPI, vector databases, asynchronous processing, and structured exports to deliver audit ready, client facing results.',
+    ],
+    flipFooter: 'GitHub link will be shared after project completion.',
+    noRepoLink: true,
+  },
+  {
     title: 'Telco Churn Intelligence',
+    date: 'Feb 2026',
     description:
       'End-to-end churn prediction system with FastAPI, Streamlit, and executive Tableau analytics.',
     tags: ['Logistic Regression', 'FastAPI', 'Streamlit', 'Tableau', 'EDA'],
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=800&fit=crop',
-    summary:
-      'Production churn intelligence platform combining ML scoring, API inference, and leadership dashboards for retention strategy.',
+    image: '/telco-churn.png',
+    summaryPoints: [
+      'Built an end-to-end production churn prediction system integrating ML, APIs, interactive visualizations, and executive analytics.',
+      'Optimized a Logistic Regression model (ROC-AUC: 0.83, 78% recall) to drive high-impact retention targeting.',
+      'Developed a real-time FastAPI inference engine with an interactive Streamlit scoring interface.',
+      'Delivered a Tableau dashboard enabling risk segmentation, revenue-at-risk analysis, and data-driven Top-K decision support.',
+    ],
     overview:
       'Built a production-ready churn prediction flow combining model scoring APIs, a business-facing app, and leadership dashboards.',
     process:
@@ -28,13 +49,40 @@ const projects = [
     github: 'https://github.com/YoursSharan1226/telco-churn-intelligence',
   },
   {
+    title: 'Airbnb Segmentation with PCA + Clustering',
+    date: 'Feb 2025 - Apr 2025',
+    description:
+      'Unsupervised segmentation of NYC Airbnb listings with geographic and cluster insights.',
+    tags: ['PCA', 'K-Means', 'Bisecting K-Means', 'Folium'],
+    image: '/airbnb-clustering.png',
+    summaryPoints: [
+      'Developed an end-to-end unsupervised ML model to segment NYC Airbnb listings by pricing, availability, and host engagement patterns.',
+      'Applied advanced preprocessing and PCA (98% variance retained) to enhance clustering efficiency.',
+      'Implemented KMeans and Bisecting KMeans, identifying 4 optimal clusters using Elbow and MSE evaluation.',
+      'Delivered actionable host segment insights with interactive geographic and cluster-based visualizations.',
+    ],
+    overview:
+      'Segmented listings by price, availability, and host behavior to reveal market positioning opportunities.',
+    process:
+      'Preprocessing -> PCA (98% variance) -> clustering evaluation -> geo-visual analysis.',
+    tools: 'Python, Scikit-learn, Pandas, Folium, Matplotlib',
+    outcome:
+      'Identified 4 meaningful host/listing segments that support pricing and supply strategy decisions.',
+    github: 'https://github.com/YoursSharan1226/Airbnb-Listing-Segmentation-using-Clustering-PCA',
+  },
+  {
     title: 'Topic Modelling: Social Media Conversations',
+    date: 'Oct 2025 - Dec 2025',
     description:
       'Scalable BERTopic pipeline extracting interpretable themes from 70K+ posts across a 65M+ corpus.',
     tags: ['BERTopic', 'SBERT', 'UMAP', 'HDBSCAN', 'NLP'],
-    image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=1200&h=800&fit=crop',
-    summary:
-      'Large-scale unsupervised NLP workflow that turns noisy social conversations into interpretable topics and stance patterns.',
+    image: '/topic-modelling.png',
+    summaryPoints: [
+      'Designed an end-to-end unsupervised NLP pipeline to analyze large-scale social media conversations without manual labeling.',
+      'Built a scalable topic modeling system (SBERT, UMAP, HDBSCAN, BERTopic) extracting 871 interpretable topics from 70K+ posts within a 65M+ dataset.',
+      'Engineered a stance analysis module using PCA, KMeans, contrastive TF-IDF, and sentiment aggregation to uncover opinion diversity.',
+      'Delivered an interpretable, reusable embedding-driven framework optimized for noisy real-world domains like geopolitics and crypto discussions.',
+    ],
     overview:
       'Designed an unsupervised NLP framework for large, noisy conversations without requiring labels.',
     process:
@@ -47,12 +95,17 @@ const projects = [
   },
   {
     title: 'Predictive Marketing Campaign Strategy',
+    date: 'Jan 2026',
     description:
       'Response propensity modeling to maximize campaign lift while minimizing spend waste.',
     tags: ['XGBoost', 'Logistic Regression', 'Top-K Metrics', 'Segmentation'],
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=800&fit=crop',
-    summary:
-      'Propensity modeling framework that ranks high-value responders and improves campaign performance under fixed budgets.',
+    image: '/marketing-campaign.png',
+    summaryPoints: [
+      'Built a predictive marketing framework focused on lift and ROI optimization under budget constraints.',
+      'Developed Logistic Regression and XGBoost models to rank customers by response probability for strategic targeting.',
+      'Captured ~83% of responders by targeting the top 30%, boosting response rates from 15% to ~42% while reducing campaign waste.',
+      'Demonstrated ML-driven resource optimization for real-world, data-backed marketing decisions.',
+    ],
     overview:
       'Built a ranking-based decision framework to select high-probability responders under fixed budget constraints.',
     process:
@@ -62,23 +115,6 @@ const projects = [
       'Captured roughly 83% of responders in the top 30% population, lifting response rate to about 42%.',
     github:
       'https://github.com/YoursSharan1226/Predictive-Analytics-for-Cost-Efficient-Marketing-Campaign-Strategy',
-  },
-  {
-    title: 'Airbnb Segmentation with PCA + Clustering',
-    description:
-      'Unsupervised segmentation of NYC Airbnb listings with geographic and cluster insights.',
-    tags: ['PCA', 'K-Means', 'Bisecting K-Means', 'Folium'],
-    image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&h=800&fit=crop',
-    summary:
-      'Clustering-driven market segmentation of Airbnb inventory to surface pricing and host behavior opportunity groups.',
-    overview:
-      'Segmented listings by price, availability, and host behavior to reveal market positioning opportunities.',
-    process:
-      'Preprocessing -> PCA (98% variance) -> clustering evaluation -> geo-visual analysis.',
-    tools: 'Python, Scikit-learn, Pandas, Folium, Matplotlib',
-    outcome:
-      'Identified 4 meaningful host/listing segments that support pricing and supply strategy decisions.',
-    github: 'https://github.com/YoursSharan1226/Airbnb-Listing-Segmentation-using-Clustering-PCA',
   },
 ];
 
@@ -105,7 +141,7 @@ const experience = [
   {
     role: 'Business Analyst Intern',
     company: 'Foyr | Chennai (Remote), INDIA',
-    period: 'Feb 2023 - July 2024',
+    period: 'Feb 2023 - July 2023',
     bullets: [
       'Performed in-depth analysis of customer data, focusing on subscription-based users, to identify trends, patterns, and customer behavior insights.',
       'Maintained and update large-scale dashboards, presenting key metrics and performance indicators to track and monitor customer engagement and subscription growth.',
@@ -124,31 +160,92 @@ const experience = [
 ];
 
 const skills = [
-  { title: 'Languages', items: ['Python', 'SQL', 'R', 'JavaScript'] },
-  { title: 'Analytics & BI', items: ['Tableau', 'Power BI', 'Excel', 'Streamlit', 'Databricks'] },
   {
-    title: 'ML & Data Science',
-    items: ['Supervised ML', 'Unsupervised ML', 'NLP', 'Forecasting', 'Feature Engineering'],
+    title: 'Core Engineering & Data Foundations',
+    items: ['Python', 'SQL', 'R', 'C++', 'Bash', 'ETL / ELT Pipelines', 'Data Modeling', 'MySQL'],
   },
-  { title: 'Delivery Stack', items: ['FastAPI', 'GitHub', 'Docker', 'Jira', 'ETL'] },
+  {
+    title: 'Intelligent Systems & Applied AI',
+    items: [
+      'Pandas',
+      'NumPy',
+      'scikit-learn',
+      'Regression',
+      'XGBoost',
+      'ARIMA / SARIMA / SARIMAX / VAR',
+      'Time Series Forecasting',
+      'Statistical Analysis',
+      'Exploratory Data Analysis',
+      'PyTorch',
+      'Hugging Face',
+      'Sentence-BERT',
+      'BERTopic',
+      'RAG',
+    ],
+  },
+  {
+    title: 'Cloud Architecture & Deployment Stack',
+    items: ['FastAPI', 'Docker', 'Kubernetes', 'Databricks'],
+  },
+  {
+    title: 'Insights, Visualization & Collaboration',
+    items: ['Tableau', 'Streamlit', 'Excel', 'Git', 'GitHub', 'Jira'],
+  },
 ];
 
 const education = [
   {
     degree: 'Masters in Business Analytics',
-    institution: 'University of Texas at Arlington',
+    institution: 'University of Texas at Arlington, TX, US',
     year: 'Aug 2024 - May 2026',
     description:
       'Coursework includes Data Science, Data Warehousing, Cloud Computing, Marketing Analytics, Forecasting, and Statistics for Business.',
   },
   {
     degree: 'Post Graduate Program in Data Science and Machine Learning',
-    institution: 'National Institute of Information Technology',
-    year: 'Completed',
+    institution: 'National Institute of Information Technology, India',
+    year: 'Nov 2022 to Dec 2023',
     description:
       'Focused on SQL, Tableau, Python, ML fundamentals, time series, and NLP.',
   },
 ];
+
+const skillIconMap = {
+  Python: 'fa-brands fa-python',
+  SQL: 'fa-solid fa-database',
+  R: 'fa-solid fa-chart-line',
+  'C++': 'fa-solid fa-code',
+  Bash: 'fa-solid fa-terminal',
+  'ETL / ELT Pipelines': 'fa-solid fa-diagram-project',
+  'Data Modeling': 'fa-solid fa-cubes',
+  MySQL: 'fa-solid fa-database',
+  Pandas: 'fa-solid fa-table',
+  NumPy: 'fa-solid fa-square-root-variable',
+  'scikit-learn': 'fa-solid fa-brain',
+  Regression: 'fa-solid fa-chart-line',
+  XGBoost: 'fa-solid fa-bolt',
+  'ARIMA / SARIMA / SARIMAX / VAR': 'fa-solid fa-wave-square',
+  'Time Series Forecasting': 'fa-solid fa-clock-rotate-left',
+  'Statistical Analysis': 'fa-solid fa-sigma',
+  'Exploratory Data Analysis': 'fa-solid fa-magnifying-glass-chart',
+  PyTorch: 'fa-solid fa-microchip',
+  'Hugging Face': 'fa-solid fa-face-smile',
+  'Sentence-BERT': 'fa-solid fa-comment-dots',
+  BERTopic: 'fa-solid fa-tags',
+  RAG: 'fa-solid fa-link',
+  FastAPI: 'fa-solid fa-gauge-high',
+  Docker: 'fa-brands fa-docker',
+  Kubernetes: 'fa-solid fa-dharmachakra',
+  Databricks: 'fa-solid fa-layer-group',
+  Tableau: 'fa-solid fa-chart-pie',
+  Streamlit: 'fa-solid fa-sliders',
+  Excel: 'fa-solid fa-file-excel',
+  Git: 'fa-brands fa-git-alt',
+  GitHub: 'fa-brands fa-github',
+  Jira: 'fa-brands fa-jira',
+};
+
+const getSkillIconClass = (item) => skillIconMap[item] || 'fa-solid fa-circle-nodes';
 
 export default function App() {
   const [activeExperience, setActiveExperience] = useState(null);
@@ -184,16 +281,10 @@ export default function App() {
         <section id="home" className="hero section">
           <div className="container hero-grid">
             <div>
-              <h1 className="hero-title">Sharan Raghavendra Ragothaman</h1>
-              <p className="hero-copy hero-copy-small">Dallas, TX, US</p>
-              <p className="eyebrow">Business Data Analyst</p>
-              <p className="hero-copy">
-                I turn complex business data into actionable insights and measurable growth.
-              </p>
+              <h1 className="hero-title">Sharan Raghavendra Ragothman</h1>
+              <p className="hero-location">Dallas, TX, US</p>
+              <p className="hero-role-title">Business &amp; Data Analyst | Growth Strategy &amp; ML Driven Insights</p>
               <div className="cta-row">
-                <a className="btn btn-primary" href="#projects">
-                  View Projects
-                </a>
                 <a className="btn btn-secondary" href="#contact">
                   Contact Me
                 </a>
@@ -201,12 +292,12 @@ export default function App() {
                   Download Resume
                 </a>
               </div>
-              <p className="hero-copy hero-copy-small">
-                Dallas, TX | <a href="mailto:sr.raya8623@gmail.com">sr.raya8623@gmail.com</a>
-              </p>
             </div>
-            <div className="hero-photo-wrap">
-              <img src="/assets/profile.jpg" alt="Sharan Raghavendra portrait" />
+            <div className="hero-visual">
+              <p className="hero-photo-kicker">Business Analytics • Data Analytics • Applied ML</p>
+              <div className="hero-photo-wrap">
+                <img src="/assets/profile.jpg" alt="Sharan Raghavendra portrait" />
+              </div>
             </div>
           </div>
         </section>
@@ -217,37 +308,75 @@ export default function App() {
             <h2 className="section-title">Featured Work</h2>
             <div className="grid two-up">
               {projects.map((project) => (
-                <a
-                  key={project.title}
-                  className="project-flip-card"
-                  href={project.github}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <div className="flip-inner">
-                    <article className="card flip-face flip-front">
-                      <div className="project-image">
-                        <img src={project.image} alt={project.title} />
-                      </div>
-                      <div className="card-body">
-                        <h3>{project.title}</h3>
-                        <p>{project.description}</p>
-                        <div className="tags">
-                          {project.tags.map((tag) => (
-                            <span key={tag}>{tag}</span>
-                          ))}
+                project.noRepoLink ? (
+                  <div key={project.title} className="project-flip-card project-flip-card-static">
+                    <div className="flip-inner">
+                      <article className="card flip-face flip-front">
+                        <div className="project-image">
+                          <span className="project-date-tag">{project.date}</span>
+                          <img src={project.image} alt={project.title} />
                         </div>
-                      </div>
-                    </article>
-                    <article className="card flip-face flip-back">
-                      <div className="card-body">
-                        <h3>{project.title}</h3>
-                        <p>{project.summary}</p>
-                        <p className="flip-repo">Open full project on GitHub</p>
-                      </div>
-                    </article>
+                        <div className="card-body">
+                          <h3>{project.title}</h3>
+                          <p className="project-front-note">{project.description}</p>
+                          <div className="tags">
+                            {project.tags.map((tag) => (
+                              <span key={tag}>{tag}</span>
+                            ))}
+                          </div>
+                        </div>
+                      </article>
+                      <article className="card flip-face flip-back">
+                        <div className="card-body">
+                          <h3>{project.title}</h3>
+                          <ul className="flip-back-points">
+                            {project.summaryPoints.map((point) => (
+                              <li key={point}>{point}</li>
+                            ))}
+                          </ul>
+                          <p className="flip-repo flip-note">{project.flipFooter}</p>
+                        </div>
+                      </article>
+                    </div>
                   </div>
-                </a>
+                ) : (
+                  <a
+                    key={project.title}
+                    className="project-flip-card"
+                    href={project.github}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <div className="flip-inner">
+                      <article className="card flip-face flip-front">
+                        <div className="project-image">
+                          <span className="project-date-tag">{project.date}</span>
+                          <img src={project.image} alt={project.title} />
+                        </div>
+                        <div className="card-body">
+                          <h3>{project.title}</h3>
+                          <p>{project.description}</p>
+                          <div className="tags">
+                            {project.tags.map((tag) => (
+                              <span key={tag}>{tag}</span>
+                            ))}
+                          </div>
+                        </div>
+                      </article>
+                      <article className="card flip-face flip-back">
+                        <div className="card-body">
+                          <h3>{project.title}</h3>
+                          <ul className="flip-back-points">
+                            {project.summaryPoints.map((point) => (
+                              <li key={point}>{point}</li>
+                            ))}
+                          </ul>
+                          <p className="flip-repo">Open full project on GitHub</p>
+                        </div>
+                      </article>
+                    </div>
+                  </a>
+                )
               ))}
             </div>
           </div>
@@ -262,12 +391,16 @@ export default function App() {
                 <button
                   type="button"
                   key={job.role}
-                  className="card info-card"
+                  className="card info-card experience-card"
                   onClick={() => setActiveExperience(job)}
                 >
-                  <span className="meta">{job.period}</span>
-                  <h3>{job.role}</h3>
-                  <p className="company">{job.company}</p>
+                  <div className="experience-card-head">
+                    <div className="experience-role-group">
+                      <h3>{job.role}</h3>
+                      <p className="company">{job.company}</p>
+                    </div>
+                    <span className="period-tag">{job.period}</span>
+                  </div>
                   <ul>
                     {job.bullets.map((bullet) => (
                       <li key={bullet}>{bullet}</li>
@@ -283,16 +416,22 @@ export default function App() {
           <div className="container">
             <p className="eyebrow">Skills</p>
             <h2 className="section-title">Technical Proficiency</h2>
-            <div className="grid two-up">
-              {skills.map((group) => (
-                <div key={group.title} className="card info-card">
-                  <h3>{group.title}</h3>
-                  <div className="tags">
-                    {group.items.map((item) => (
-                      <span key={item}>{item}</span>
-                    ))}
+            <div className="skills-lanes">
+              {skills.map((group, index) => (
+                <article key={group.title} className="skill-lane">
+                  <div className="skill-lane-head">
+                    <span className="skill-index">{String(index + 1).padStart(2, '0')}</span>
+                    <h3>{group.title}</h3>
                   </div>
-                </div>
+                  <ul className="skill-items-list">
+                    {group.items.map((item) => (
+                      <li key={item}>
+                        <i className={getSkillIconClass(item)} aria-hidden="true" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </article>
               ))}
             </div>
           </div>
@@ -305,9 +444,13 @@ export default function App() {
             <div className="timeline">
               {education.map((item) => (
                 <article key={item.degree} className="card timeline-card">
-                  <span className="meta">{item.year}</span>
-                  <h3>{item.degree}</h3>
-                  <p className="company">{item.institution}</p>
+                  <div className="education-card-head">
+                    <div className="education-role-group">
+                      <h3>{item.degree}</h3>
+                      <p className="company">{item.institution}</p>
+                    </div>
+                    <span className="period-tag">{item.year}</span>
+                  </div>
                   <p>{item.description}</p>
                 </article>
               ))}

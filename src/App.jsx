@@ -1,12 +1,41 @@
 import { useMemo, useState } from 'react';
+import { BackgroundPathsOverlay } from '@/components/ui/background-paths';
 
 const navItems = [
   { href: '#home', label: 'Home' },
+  { href: '#about', label: 'About' },
   { href: '#projects', label: 'Projects' },
   { href: '#experience', label: 'Experience' },
   { href: '#skills', label: 'Skills' },
   { href: '#education', label: 'Education' },
   { href: '#contact', label: 'Contact' },
+];
+
+const aboutPoints = [
+  {
+    number: '01',
+    title: 'I Design for Auditability',
+    text: 'Every model output should trace back to evidence.',
+    side: 'left',
+  },
+  {
+    number: '02',
+    title: 'I Blend Business + AI',
+    text: 'Forecasting meets GenAI. Strategy meets system design.',
+    side: 'right',
+  },
+  {
+    number: '03',
+    title: 'I Optimize for Real-World Constraints',
+    text: 'Latency. Scale. Explainability. Deployment.',
+    side: 'left',
+  },
+  {
+    number: '04',
+    title: 'I Build for Decision Makers',
+    text: 'Not just accuracy - clarity, reliability, and actionability.',
+    side: 'right',
+  },
 ];
 
 const projects = [
@@ -121,7 +150,8 @@ const projects = [
 const experience = [
   {
     role: 'Junior Business Analyst',
-    company: 'Crytonix Remote Tech | Chennai, INDIA',
+    company: 'Crytonix Remote Tech',
+    location: 'Chennai, INDIA',
     period: 'Jan 2024 - July 2024',
     bullets: [
       'Developed and refined business strategies to support successful product releases, aligning with client requirements and market demands.',
@@ -140,7 +170,8 @@ const experience = [
   },
   {
     role: 'Business Analyst Intern',
-    company: 'Foyr | Chennai (Remote), INDIA',
+    company: 'Foyr',
+    location: 'Hyderabad, INDIA',
     period: 'Feb 2023 - July 2023',
     bullets: [
       'Performed in-depth analysis of customer data, focusing on subscription-based users, to identify trends, patterns, and customer behavior insights.',
@@ -196,14 +227,16 @@ const skills = [
 const education = [
   {
     degree: 'Masters in Business Analytics',
-    institution: 'University of Texas at Arlington, TX, US',
+    institution: 'University of Texas at Arlington',
+    location: 'TX, US',
     year: 'Aug 2024 - May 2026',
     description:
       'Coursework includes Data Science, Data Warehousing, Cloud Computing, Marketing Analytics, Forecasting, and Statistics for Business.',
   },
   {
     degree: 'Post Graduate Program in Data Science and Machine Learning',
-    institution: 'National Institute of Information Technology, India',
+    institution: 'National Institute of Information Technology',
+    location: 'India',
     year: 'Nov 2022 to Dec 2023',
     description:
       'Focused on SQL, Tableau, Python, ML fundamentals, time series, and NLP.',
@@ -249,16 +282,8 @@ const getSkillIconClass = (item) => skillIconMap[item] || 'fa-solid fa-circle-no
 
 export default function App() {
   const [activeExperience, setActiveExperience] = useState(null);
-  const [showToast, setShowToast] = useState(false);
 
   const year = useMemo(() => new Date().getFullYear(), []);
-
-  const handleContactSubmit = (event) => {
-    event.preventDefault();
-    setShowToast(true);
-    event.currentTarget.reset();
-    setTimeout(() => setShowToast(false), 2500);
-  };
 
   return (
     <div className="app-shell">
@@ -279,9 +304,13 @@ export default function App() {
 
       <main>
         <section id="home" className="hero section">
+          <BackgroundPathsOverlay />
           <div className="container hero-grid">
             <div>
-              <h1 className="hero-title">Sharan Raghavendra Ragothman</h1>
+              <h1 className="hero-title">
+                <span className="hero-firstline">Sharan Raghavendra</span>
+                <span className="hero-lastname">Ragothman</span>
+              </h1>
               <p className="hero-location">Dallas, TX, US</p>
               <p className="hero-role-title">Business &amp; Data Analyst | Growth Strategy &amp; ML Driven Insights</p>
               <div className="cta-row">
@@ -298,6 +327,48 @@ export default function App() {
               <div className="hero-photo-wrap">
                 <img src="/assets/profile.jpg" alt="Sharan Raghavendra portrait" />
               </div>
+              <div className="hero-social-stack" aria-label="Social links">
+                <a
+                  className="hero-social-pill"
+                  href="https://linkedin.com/in/sharan8623"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="LinkedIn"
+                >
+                  <i className="fa-brands fa-linkedin-in" aria-hidden="true" />
+                </a>
+                <a
+                  className="hero-social-pill"
+                  href="https://github.com/YoursSharan1226"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="GitHub"
+                >
+                  <i className="fa-brands fa-github" aria-hidden="true" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="about" className="section">
+          <div className="container">
+            <p className="eyebrow">About</p>
+            <h2 className="section-title">What I bring to the Table</h2>
+            <div className="about-timeline" aria-label="What I bring to the Table">
+              <div className="about-line" aria-hidden="true" />
+              {aboutPoints.map((point) => (
+                <article
+                  key={`${point.number}-${point.title}`}
+                  className={`about-item about-item-${point.side}`}
+                >
+                  <span className="about-number" aria-hidden="true">
+                    {point.number}
+                  </span>
+                  <h3>{point.title}</h3>
+                  <p>{point.text}</p>
+                </article>
+              ))}
             </div>
           </div>
         </section>
@@ -397,7 +468,13 @@ export default function App() {
                   <div className="experience-card-head">
                     <div className="experience-role-group">
                       <h3>{job.role}</h3>
-                      <p className="company">{job.company}</p>
+                      <p className="company experience-company-line">
+                        <span className="experience-company-name">{job.company}</span>
+                        <span className="experience-company-sep" aria-hidden="true">•</span>
+                        <span className="experience-location">
+                          <i className="fa-solid fa-location-dot" aria-hidden="true" /> {job.location}
+                        </span>
+                      </p>
                     </div>
                     <span className="period-tag">{job.period}</span>
                   </div>
@@ -447,7 +524,13 @@ export default function App() {
                   <div className="education-card-head">
                     <div className="education-role-group">
                       <h3>{item.degree}</h3>
-                      <p className="company">{item.institution}</p>
+                      <p className="company education-company-line">
+                        <span className="education-company-name">{item.institution}</span>
+                        <span className="education-company-sep" aria-hidden="true">•</span>
+                        <span className="education-location">
+                          <i className="fa-solid fa-location-dot" aria-hidden="true" /> {item.location}
+                        </span>
+                      </p>
                     </div>
                     <span className="period-tag">{item.year}</span>
                   </div>
@@ -467,25 +550,38 @@ export default function App() {
                 Open to analytics, business intelligence, and data science opportunities. Reach out for collaboration or consulting.
               </p>
               <div className="contact-links">
-                <a href="mailto:sr.raya8623@gmail.com">Email</a>
+                <a href="mailto:sr.raya8623@gmail.com">
+                  <i className="fa-solid fa-envelope" aria-hidden="true" />
+                  <span>Email</span>
+                </a>
                 <a href="https://linkedin.com/in/sharan8623" target="_blank" rel="noreferrer">
-                  LinkedIn
+                  <i className="fa-brands fa-linkedin-in" aria-hidden="true" />
+                  <span>LinkedIn</span>
                 </a>
                 <a href="https://github.com/YoursSharan1226" target="_blank" rel="noreferrer">
-                  GitHub
+                  <i className="fa-brands fa-github" aria-hidden="true" />
+                  <span>GitHub</span>
                 </a>
               </div>
             </div>
-            <form className="card form-card" onSubmit={handleContactSubmit}>
-              <input type="text" placeholder="Your Name" required />
-              <input type="email" placeholder="Your Email" required />
-              <textarea placeholder="Your Message" rows="5" required />
+            <form
+              className="card form-card"
+              action="https://formsubmit.co/sr.raya8623@gmail.com"
+              method="POST"
+            >
+              <input type="hidden" name="_subject" value="New message from portfolio contact form" />
+              <input type="hidden" name="_template" value="table" />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="text" name="name" placeholder="Your Name" required />
+              <input type="email" name="email" placeholder="Your Email" required />
+              <textarea name="message" placeholder="Your Message" rows="5" required />
               <button type="submit" className="btn btn-primary">
                 Send Message
               </button>
             </form>
           </div>
         </section>
+
       </main>
 
       <footer className="footer">
@@ -499,7 +595,9 @@ export default function App() {
               Close
             </button>
             <h3>{activeExperience.role}</h3>
-            <p className="company">{activeExperience.company}</p>
+            <p className="company">
+              {activeExperience.company} • {activeExperience.location}
+            </p>
             <p>
               <strong>Responsibilities:</strong> {activeExperience.details.responsibilities}
             </p>
@@ -513,7 +611,6 @@ export default function App() {
         </div>
       )}
 
-      {showToast && <div className="toast card">Message sent successfully!</div>}
     </div>
   );
 }

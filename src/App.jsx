@@ -447,7 +447,7 @@ export default function App() {
             <div>
               <h1 className="hero-title">
                 <span className="hero-firstline">Sharan Raghavendra</span>
-                <span className="hero-lastname">Ragothman</span>
+                <span className="hero-lastname">Ragothaman</span>
               </h1>
               <p className="hero-location">Dallas, TX, US</p>
               <p className="hero-role-title">Business &amp; Data Analyst | Growth Strategy &amp; ML Driven Insights</p>
